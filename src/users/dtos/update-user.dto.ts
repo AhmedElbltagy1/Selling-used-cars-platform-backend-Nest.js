@@ -1,15 +1,11 @@
-import { Optional } from '@nestjs/common';
-import {IsEmail,IsString,IsOptional} from 'class-validator';
-
+import { IsEmail, IsString, IsOptional } from 'class-validator';
 
 export class UpdateUserDto {
+  @IsEmail()
+  @IsOptional()
+  email: string;
 
-    id : string ;
-
-    @IsEmail()
-    @IsOptional()
-    email : string ;
-    
-    @IsString()
-    password : string 
+  @IsString()
+  @IsOptional()
+  password: string;
 }

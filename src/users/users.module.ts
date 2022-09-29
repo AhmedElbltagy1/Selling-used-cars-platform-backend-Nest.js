@@ -5,7 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user.entity';
 
 @Module({
-  imports:[TypeOrmModule.forFeature([User])], // creates the repository for us
+   imports:[TypeOrmModule.forFeature([User])],// creates the repository for us
   controllers: [UsersController],
   providers: [UsersService]
 })
